@@ -11,20 +11,18 @@ public class Attribute {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(unique = true)
     private String name;
     private double scaleFactor;
-    @ManyToMany(mappedBy = "attributes")
-    private List<Weapon> weapons = new ArrayList<>();
+    @ManyToOne
+    private Weapon weapon;
 
     public Attribute() {
     }
 
-    public Attribute(String name, double scaleFactor, List<Weapon> weapons) {
+    public Attribute(String name, double scaleFactor, Weapon weapon) {
         this.name = name;
         this.scaleFactor = scaleFactor;
-        this.weapons = weapons;
+        this.weapon = weapon;
     }
 
     public Integer getId() {
@@ -51,11 +49,11 @@ public class Attribute {
         this.scaleFactor = scaleFactor;
     }
 
-    public List<Weapon> getWeapons() {
-        return weapons;
+    public Weapon getWeapon() {
+        return weapon;
     }
 
-    public void setWeapons(List<Weapon> weapons) {
-        this.weapons = weapons;
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 }

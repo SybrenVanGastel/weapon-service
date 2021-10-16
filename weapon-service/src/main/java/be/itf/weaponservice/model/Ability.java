@@ -12,6 +12,7 @@ public class Ability {
 
     @Column(unique = true)
     private String name;
+    @Column(length = 1024)
     private String description;
     private String imageUrl;
     private String category;

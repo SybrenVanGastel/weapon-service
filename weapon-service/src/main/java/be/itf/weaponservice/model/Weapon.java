@@ -18,7 +18,7 @@ public class Weapon {
     private String imageUrl;
     @OneToMany(mappedBy = "weapon")
     private List<Ability> abilities = new ArrayList<>();
-    @ManyToMany
+    @OneToMany(mappedBy = "weapon")
     private List<Attribute> attributes = new ArrayList<>();
 
 

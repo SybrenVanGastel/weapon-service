@@ -1,6 +1,7 @@
 package be.itf.weaponservice.controller;
 
 import be.itf.weaponservice.model.Ability;
+import be.itf.weaponservice.model.Attribute;
 import be.itf.weaponservice.model.Weapon;
 import be.itf.weaponservice.repository.AbilityRepository;
 import be.itf.weaponservice.repository.AttributeRepository;
@@ -21,6 +22,7 @@ public class FillController {
     //fill table
     @GetMapping("/fill")
     public String fillDB() {
+        //// Weapons
         Weapon weapon1 = new Weapon("Rapier", "A battle-worn rapier that still holds its point.", "https://cdn.newworldfans.com/db_images/db/items_hires/1hswordbt3.png");
         Weapon weapon2 = new Weapon("Sword", "1-Handed. Favors Strength for dealing damage, but Dexterity also contributes.", "https://cdn.newworldfans.com/db_images/db/items_hires/1hlongsworddropt2.png");
         Weapon weapon3 = new Weapon("Hatchet", "It is clearly an older weapon, yet the haft shows no sign of rot.", "https://cdn.newworldfans.com/db_images/db/items_hires/1hthrowingaxeancientt2.png");
@@ -45,6 +47,7 @@ public class FillController {
         weaponRepository.save(weapon10);
         weaponRepository.save(weapon11);
 
+        //// Abilities
         // Rapier abilities
         abilityRepository.save(new Ability("Tondo", "Slash so quickly that it extends the reach of your blade up to 5m. This strike deals 50.0% direct weapon damage but also applies a bleed that will deal 85% weapon damage over 12.0 seconds. This can stack up to 3 times refreshing previous applications.", "https://cdn.newworldfans.com/db_images/db/abilities/rapier_ability1_slash.png", "Blood", "#FF0000", weapon1));
         abilityRepository.save(new Ability("Flurry", "Enter a posed stance and unleash a series of five quick thrust attacks with each strike dealing more damage. Flurry can be dodge canceled at any time.", "https://cdn.newworldfans.com/db_images/db/abilities/rapier_ability2_flurry.png", "Blood", "#FF0000", weapon1));
@@ -132,6 +135,86 @@ public class FillController {
         abilityRepository.save(new Ability("Ice Pylon", "A placed Ice Pylon that fires ice projectiles dealing 50.0% weapon damage at enemies within a 20 meter range for 15 seconds or until killed. Ice Pylon creates a 1 meter radius frost area that enables frost powers.", "https://cdn.newworldfans.com/db_images/db/abilities/icemagic_ability4.png", "Builder", "#0000FF ", weapon11));
         abilityRepository.save(new Ability("Ice Shower", "Summon a shower of ice that creates a frosted area approximately 1 meter by 5 meters. Enemies that enter the Ice Shower will be stricken with a powerful Frostbite. Frostbite roots for 1 second, blocks sprinting and dodging, slows speed by 50%, and will remain on target for 3 second after exiting the Ice Shower. Ice Shower has a lifetime of 4 seconds.", "https://cdn.newworldfans.com/db_images/db/abilities/icemagic_ability5.png", "Builder", "#0000FF ", weapon11));
         abilityRepository.save(new Ability("Entombed", "Player can entomb themselves in ice to become invulnerable and greatly increase mana regen. The Ice Tomb has a lifetime of 10 seconds and can be destroyed. Players have two options to cancel Entomb, exit by pressing RMB or break out of the Ice Tomb by pressing LMB causing a damaging knockback for 20 mana.", "https://cdn.newworldfans.com/db_images/db/abilities/icemagic_ability6.png", "Builder", "#0000FF ", weapon11));
+
+
+        //// Attributes
+        // Rapier abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon1));
+        attributeRepository.save(new Attribute("Dexterity", 1, weapon1));
+        attributeRepository.save(new Attribute("Intelligence", 0.5, weapon1));
+        attributeRepository.save(new Attribute("Focus", 0, weapon1));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon1));
+
+        // Sword abilities
+        attributeRepository.save(new Attribute("Strength", 1, weapon2));
+        attributeRepository.save(new Attribute("Dexterity", 0.5, weapon2));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon2));
+        attributeRepository.save(new Attribute("Focus", 0, weapon2));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon2));
+
+        // Hatchet abilities
+        attributeRepository.save(new Attribute("Strength", 1, weapon3));
+        attributeRepository.save(new Attribute("Dexterity", 0.5, weapon3));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon3));
+        attributeRepository.save(new Attribute("Focus", 0, weapon3));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon3));
+
+        // Spear abilities
+        attributeRepository.save(new Attribute("Strength", 0.5, weapon4));
+        attributeRepository.save(new Attribute("Dexterity", 1, weapon4));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon4));
+        attributeRepository.save(new Attribute("Focus", 0, weapon4));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon4));
+
+        // Great axe abilities
+        attributeRepository.save(new Attribute("Strength", 1, weapon5));
+        attributeRepository.save(new Attribute("Dexterity", 0, weapon5));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon5));
+        attributeRepository.save(new Attribute("Focus", 0, weapon5));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon5));
+
+        // War hammer abilities
+        attributeRepository.save(new Attribute("Strength", 1, weapon6));
+        attributeRepository.save(new Attribute("Dexterity", 0, weapon6));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon6));
+        attributeRepository.save(new Attribute("Focus", 0, weapon6));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon6));
+
+        // Bow abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon7));
+        attributeRepository.save(new Attribute("Dexterity", 1, weapon7));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon7));
+        attributeRepository.save(new Attribute("Focus", 0, weapon7));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon7));
+
+        // Musket abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon8));
+        attributeRepository.save(new Attribute("Dexterity", 1, weapon8));
+        attributeRepository.save(new Attribute("Intelligence", 0.5, weapon8));
+        attributeRepository.save(new Attribute("Focus", 0, weapon8));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon8));
+
+        // Fire staff abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon9));
+        attributeRepository.save(new Attribute("Dexterity", 0, weapon9));
+        attributeRepository.save(new Attribute("Intelligence", 1, weapon9));
+        attributeRepository.save(new Attribute("Focus", 0, weapon9));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon9));
+
+        // Life staff abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon10));
+        attributeRepository.save(new Attribute("Dexterity", 0, weapon10));
+        attributeRepository.save(new Attribute("Intelligence", 0, weapon10));
+        attributeRepository.save(new Attribute("Focus", 1, weapon10));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon10));
+
+        // Ice gauntlet abilities
+        attributeRepository.save(new Attribute("Strength", 0, weapon11));
+        attributeRepository.save(new Attribute("Dexterity", 0, weapon11));
+        attributeRepository.save(new Attribute("Intelligence", 1, weapon11));
+        attributeRepository.save(new Attribute("Focus", 0, weapon11));
+        attributeRepository.save(new Attribute("Constitution", 0, weapon11));
+
 
         return "Succes!";
     }

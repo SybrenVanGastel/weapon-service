@@ -57,7 +57,9 @@ public class WeaponResponseBuilder {
             attributeMap.put("name", attribute.getName());
             attributeMap.put("scale_factor", attribute.getScaleFactor());
 
-            attributeList.add(attributeMap);
+            if (attribute.getScaleFactor() > 0) {
+                attributeList.add(attributeMap);
+            }
         }
 
         for (Ability ability : weapon.getAbilities()) {
@@ -68,7 +70,7 @@ public class WeaponResponseBuilder {
             abilityMap.put("description", ability.getDescription());
             abilityMap.put("image_url", ability.getImageUrl());
 
-            attributeList.add(abilityMap);
+            abilityList.add(abilityMap);
         }
 
         weaponMap.put("attributes", attributeList);
