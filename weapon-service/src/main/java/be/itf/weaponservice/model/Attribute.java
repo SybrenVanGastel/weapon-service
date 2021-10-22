@@ -1,5 +1,7 @@
 package be.itf.weaponservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ public class Attribute {
     private String name;
     private double scaleFactor;
     @ManyToOne
+    @JsonIgnore
     private Weapon weapon;
 
     public Attribute() {
@@ -23,6 +26,11 @@ public class Attribute {
         this.name = name;
         this.scaleFactor = scaleFactor;
         this.weapon = weapon;
+    }
+
+    public Attribute(String name, double scaleFactor) {
+        this.name = name;
+        this.scaleFactor = scaleFactor;
     }
 
     public Integer getId() {

@@ -1,5 +1,7 @@
 package be.itf.weaponservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class Ability {
     private String category;
     private String color;
     @ManyToOne
+    @JsonIgnore
     private Weapon weapon;
 
     public Ability() {
@@ -30,6 +33,14 @@ public class Ability {
         this.category = category;
         this.color = color;
         this.weapon = weapon;
+    }
+
+    public Ability(String name, String description, String imageUrl, String category, String color) {
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.category = category;
+        this.color = color;
     }
 
     public Integer getId() {

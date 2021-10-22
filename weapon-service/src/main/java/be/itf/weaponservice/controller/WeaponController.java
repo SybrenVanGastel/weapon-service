@@ -22,7 +22,7 @@ public class WeaponController {
     @GetMapping("/weapon/{name}")
     public ResponseEntity<Object> getOneWeaponByName(@PathVariable String name) {
         try {
-            return WeaponResponseBuilder.generateOneWeapon("Successfully returned the weapon", HttpStatus.OK, weaponRepository.findByName(name));
+            return new ResponseEntity<>(weaponRepository.findByName(name), HttpStatus.OK);
         } catch (Exception e) {
             System.out.println(e);
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -32,17 +32,7 @@ public class WeaponController {
     @GetMapping("/weapons")
     public ResponseEntity<Object> getAllWeapons() {
         try {
-            return WeaponResponseBuilder.generateAllWeapons("Successfully returned all weapons", HttpStatus.OK, weaponRepository.findAll());
-        } catch (Exception e) {
-            System.out.println(e);
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-    }
-
-    @GetMapping("/weapon/detail/{name}")
-    public ResponseEntity<Object> getOneWeaponDetailedByName(@PathVariable String name) {
-        try {
-            return WeaponResponseBuilder.generateOneWeaponDetailed("Successfully returned the weapon", HttpStatus.OK, weaponRepository.findByName(name));
+            return new ResponseEntity<>(weaponRepository.findAll(), HttpStatus.OK);
         } catch (Exception e) {
             System.out.println(e);
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

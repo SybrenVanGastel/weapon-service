@@ -16,9 +16,9 @@ public class Weapon {
     private String name;
     private String description;
     private String imageUrl;
-    @OneToMany(mappedBy = "weapon")
+    @OneToMany(mappedBy = "weapon", cascade = CascadeType.ALL)
     private List<Ability> abilities = new ArrayList<>();
-    @OneToMany(mappedBy = "weapon")
+    @OneToMany(mappedBy = "weapon", cascade = CascadeType.ALL)
     private List<Attribute> attributes = new ArrayList<>();
 
 
@@ -29,6 +29,14 @@ public class Weapon {
         this.name = name;
         this.description = description;
         this.imageUrl = imageUrl;
+    }
+
+    public Weapon(String name, String description, String imageUrl, List<Ability> abilities, List<Attribute> attributes) {
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.abilities = abilities;
+        this.attributes = attributes;
     }
 
     public Integer getId() {

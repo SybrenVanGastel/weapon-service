@@ -27,13 +27,13 @@ public class FillController {
         Weapon weapon2 = new Weapon("Sword", "1-Handed. Favors Strength for dealing damage, but Dexterity also contributes.", "https://cdn.newworldfans.com/db_images/db/items_hires/1hlongsworddropt2.png");
         Weapon weapon3 = new Weapon("Hatchet", "It is clearly an older weapon, yet the haft shows no sign of rot.", "https://cdn.newworldfans.com/db_images/db/items_hires/1hthrowingaxeancientt2.png");
         Weapon weapon4 = new Weapon("Spear", "Though it has seen many battles, this spear shows no signs of age or rot.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hspeart5.png");
-        Weapon weapon5 = new Weapon("Great axe", "Though this axe shows clear signs of use, the blades are sharp as ever.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hgreataxeancientt2.png");
-        Weapon weapon6 = new Weapon("War hammer", "Even though it appears to have seen many battles, the leather on the haft shows little wear.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hwarhammerdropt2.png");
+        Weapon weapon5 = new Weapon("GreatAxe", "Though this axe shows clear signs of use, the blades are sharp as ever.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hgreataxeancientt2.png");
+        Weapon weapon6 = new Weapon("WarHammer", "Even though it appears to have seen many battles, the leather on the haft shows little wear.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hwarhammerdropt2.png");
         Weapon weapon7 = new Weapon("Bow", "Though old, this bow draws as though it was strung mere days ago.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hbowancientt2.png");
         Weapon weapon8 = new Weapon("Musket", "While relatively modern, it is clear this weapon was here before you.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hmusketdropt2.png");
-        Weapon weapon9 = new Weapon("Fire staff", "A vestige of an ancient civilization that had mastered pyromancy.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hstafffiredropt5.png");
-        Weapon weapon10 = new Weapon("Life staff", "A vestige of an ancient civilization that had mastered arcana.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hstafflifedropt2.png");
-        Weapon weapon11 = new Weapon("Ice gauntlet", "This Ice Gauntlet has clearly seen much use, but it is none the worse for wear.", "https://cdn.newworldfans.com/db_images/db/items_hires/1helementalgauntlet_icet2.png");
+        Weapon weapon9 = new Weapon("FireStaff", "A vestige of an ancient civilization that had mastered pyromancy.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hstafffiredropt5.png");
+        Weapon weapon10 = new Weapon("LifeStaff", "A vestige of an ancient civilization that had mastered arcana.", "https://cdn.newworldfans.com/db_images/db/items_hires/2hstafflifedropt2.png");
+        Weapon weapon11 = new Weapon("IceGauntlet", "This Ice Gauntlet has clearly seen much use, but it is none the worse for wear.", "https://cdn.newworldfans.com/db_images/db/items_hires/1helementalgauntlet_icet2.png");
 
         weaponRepository.save(weapon1);
         weaponRepository.save(weapon2);
