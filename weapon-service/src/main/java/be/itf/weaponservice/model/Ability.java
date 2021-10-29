@@ -1,5 +1,7 @@
 package be.itf.weaponservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class Ability {
     private String category;
     private String color;
     @ManyToOne
+    @JsonIgnore
     private Weapon weapon;
 
     public Ability() {
