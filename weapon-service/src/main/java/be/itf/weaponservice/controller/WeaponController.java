@@ -2,7 +2,6 @@ package be.itf.weaponservice.controller;
 
 import be.itf.weaponservice.model.Weapon;
 import be.itf.weaponservice.repository.WeaponRepository;
-import be.itf.weaponservice.response.WeaponResponseBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.http.HttpStatus;
