@@ -6,7 +6,6 @@ import be.itf.weaponservice.model.Weapon;
 import be.itf.weaponservice.repository.AbilityRepository;
 import be.itf.weaponservice.repository.AttributeRepository;
 import be.itf.weaponservice.repository.WeaponRepository;
-import be.itf.weaponservice.response.WeaponResponseBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
