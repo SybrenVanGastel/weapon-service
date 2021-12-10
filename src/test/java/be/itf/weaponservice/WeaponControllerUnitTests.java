@@ -26,7 +26,7 @@ import static org.mockito.BDDMockito.given;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class WeaponControllerUnitTests {
+class WeaponControllerUnitTests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -53,7 +53,7 @@ public class WeaponControllerUnitTests {
     private List<Weapon> allWeapons = Arrays.asList(testweapon, testweapon2);
 
     @Test
-    public void givenWeapon_whenGetWeaponByWeaponName_thenReturnJsonWeapon() throws Exception {
+    void givenWeapon_whenGetWeaponByWeaponName_thenReturnJsonWeapon() throws Exception {
         given(weaponRepository.findByName("TestWeapon")).willReturn(testweapon);
 
         mockMvc.perform(get("/weapon/{name}", testweapon.getName()))
@@ -73,7 +73,7 @@ public class WeaponControllerUnitTests {
                 .andExpect(jsonPath("$.attributes[0].scaleFactor", is(1.0)));    }
 
     @Test
-    public void givenWeapons_whenGetAllWeapons_thenReturnJsonWeapons() throws Exception {
+    void givenWeapons_whenGetAllWeapons_thenReturnJsonWeapons() throws Exception {
         given(weaponRepository.findAll()).willReturn(allWeapons);
 
         mockMvc.perform(get("/weapons"))

@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 // sets up the MockMvc object for us to inject
 @AutoConfigureMockMvc
-public class WeaponControllerIntegrationTests {
+class WeaponControllerIntegrationTests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -77,7 +77,7 @@ public class WeaponControllerIntegrationTests {
 
     // Test for one weapon by name
     @Test
-    public void givenWeapon_whenGetWeaponByWeaponName_thenReturnJsonWeapon() throws Exception {
+    void givenWeapon_whenGetWeaponByWeaponName_thenReturnJsonWeapon() throws Exception {
         // perform a HTTP request
         mockMvc.perform(get("/weapon/{name}", testweapon.getName()))
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
@@ -98,7 +98,7 @@ public class WeaponControllerIntegrationTests {
 
     // Test for all weapons
     @Test
-    public void givenWeapons_whenGetAllWeapons_thenReturnJsonWeapons() throws Exception {
+    void givenWeapons_whenGetAllWeapons_thenReturnJsonWeapons() throws Exception {
         // perform a HTTP request
         mockMvc.perform(get("/weapons"))
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
